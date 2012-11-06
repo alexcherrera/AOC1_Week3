@@ -9,5 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+{
+//Variables:
+int total;
+int totalAdd;
 
+}
+//Functions:
+-(int)addFunction:(NSInteger)carOne part2Add:(NSInteger)carTwo;
 @end

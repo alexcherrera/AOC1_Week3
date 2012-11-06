@@ -16,6 +16,8 @@
 
 - (void)viewDidLoad
 {
+//Passing the values to get the total sum of both:
+	totalAdd = [self addFunction:25000 part2Add:40000];
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -25,5 +27,8 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+-(int)addFunction:(NSInteger)carOne part2Add:(NSInteger)carTwo {
+	total = carOne + carTwo;
+	return total;
+}
 @end
