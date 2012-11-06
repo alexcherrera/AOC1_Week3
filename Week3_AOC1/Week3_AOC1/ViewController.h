@@ -13,8 +13,15 @@
 //Variables:
 int total;
 int totalAdd;
+int carOne;
+int carTwo;
+int maxValue;
+BOOL compareResults;
+NSObject * carValue;
 
 }
 //Functions:
 -(int)addFunction:(NSInteger)carOne part2Add:(NSInteger)carTwo;
+-(BOOL)boolCompare:(NSInteger)totalValue boolCompare2:(NSInteger)maxValue;
+
 @end
