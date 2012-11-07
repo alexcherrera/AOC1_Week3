@@ -17,11 +17,15 @@ int carOne;
 int carTwo;
 int maxValue;
 BOOL compareResults;
-NSObject * carValue;
+NSString * firstString;
+NSString * secondString;
+NSString * finalString;
+NSString * stringToReturn;
+NSMutableString * mutableString;
 
 }
 //Functions:
--(int)addFunction:(NSInteger)carOne part2Add:(NSInteger)carTwo;
--(BOOL)boolCompare:(NSInteger)totalValue boolCompare2:(NSInteger)maxValue;
-
+-(int)addInt1:(NSInteger)car1Value addingInt2:(NSInteger)car2Value;
+-(BOOL)boolCompare:(NSInteger)totalValue boolComparing2:(NSInteger)maxValue;
+-(NSString*)appendStrings:(NSString*)lonelyString appendingToString:(NSString*)combindString;
 @end
