@@ -17,10 +17,12 @@ int carOne;
 int carTwo;
 int maxValue;
 BOOL compareResults;
+UIAlertView * stringAlert;
 NSString * firstString;
 NSString * secondString;
 NSString * finalString;
 NSString * stringToReturn;
+NSString * formatString;
 NSMutableString * mutableString;
 
 }
@@ -28,4 +30,5 @@ NSMutableString * mutableString;
 -(int)addInt1:(NSInteger)car1Value addingInt2:(NSInteger)car2Value;
 -(BOOL)boolCompare:(NSInteger)totalValue boolComparing2:(NSInteger)maxValue;
 -(NSString*)appendStrings:(NSString*)lonelyString appendingToString:(NSString*)combindString;
+-(NSString*)displayAlertWithString:(NSString*)displayString;
 @end
