@@ -17,13 +17,16 @@ int carOne;
 int carTwo;
 int maxValue;
 BOOL compareResults;
+NSArray * twoIntValues;
 UIAlertView * stringAlert;
 NSString * firstString;
 NSString * secondString;
 NSString * finalString;
-NSString * stringToReturn;
+NSString * stringToCapture;
 NSString * formatString;
 NSMutableString * mutableString;
+NSNumber * bundleInt;
+NSString * convertToString;
 
 }
 //Functions:

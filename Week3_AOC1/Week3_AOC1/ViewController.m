@@ -20,7 +20,9 @@
 	carOne = 25000;
 	carTwo = 40000;
 	maxValue = 70000;
-//Calling and passing the values to get the total sum of both:
+	twoIntValues = [NSArray arrayWithObjects:carOne, carTwo, nil];
+	//twoIntValues = []
+//Calling, passing, and capturing the values to get the total sum of both:
 	totalAdd = [self addInt1:carOne addingInt2:carTwo];
 	NSLog(@"total is %i", totalAdd);
 //To get YES or NO, Call the function and pass the values:
@@ -28,6 +30,7 @@
 	//To display the results using an if statement:
 		if (compareResults == YES)
 		{
+			[self displayAlertWithString:(NSString*)carOne];
 			NSLog(@"Yes we can buy both cars together");
 		} else
 		  {
@@ -40,9 +43,16 @@
 	formatString = [[NSString alloc]initWithFormat:@"%@ and if the price is $%i we will buy it today!",finalString, totalAdd ];
 	NSLog(@"%@",finalString);
 	NSLog(@"%@", formatString);
+
 //Displaying with an alert:
 	//UIAlertView * stringAlert = [[UIAlertView alloc] initWithTitle:
+	//Captured the result and passing to be displayed (UIAlertView):
 	[self displayAlertWithString:formatString];
+	
+//NSNumber and converting to NSString:
+	bundleInt = [[NSNumber alloc]initWithInt:totalAdd];
+	convertToString = [bundleInt stringValue];
+	[self displayAlertWithString:convertToString];
 	
 	[super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
@@ -75,9 +85,10 @@
 -(NSString*)appendStrings:(NSString*)lonelyString appendingToString:(NSString*)combindString
 {
 	mutableString = [[NSMutableString alloc]initWithString:lonelyString];
-	stringToReturn = [[NSString alloc]init];
-	stringToReturn = [mutableString stringByAppendingString:combindString];
-	return stringToReturn;
+	stringToCapture = [[NSString alloc]init];
+	stringToCapture = [mutableString stringByAppendingString:combindString];
+	//[self displayAlertWithString:stringToCapture];
+	return stringToCapture;
 }
 -(NSString*)displayAlertWithString:(NSString*)displayString
 {
@@ -86,6 +97,10 @@
 	{
 		[stringAlert show];
 	}
+	/*if (displayString === convertToString)
+	{
+		
+	}*/
 	return 0;
 }
 @end
